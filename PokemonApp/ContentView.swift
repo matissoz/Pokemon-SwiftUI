@@ -8,17 +8,31 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Environment(PokemonManager.self) var pokemonManager
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            if pokemonManager.isLoading {
+                ProgressView()
+            } else {
+                List(pokemonManager.pokemon) { pokemon in
+                    HStack {
+                        AsyncImage(url: URL(string: pokemon.image ?? "")) { image in
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 60, height: 60)
+                        } placeholder: {
+                            ProgressView().frame(width: 60, height: 60)
+                        }
+                        Text(pokemon.name.capitalized)
+                    }
+                }
+            }
         }
-        .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView().environment(PokemonManager())
 }

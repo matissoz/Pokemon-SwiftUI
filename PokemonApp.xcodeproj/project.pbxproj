@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		1AE05CF52E9942260000D92B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1AE05CF42E9942260000D92B /* Alamofire */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		1A07A4482E98359300C4911E /* PokemonApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AE05CF52E9942260000D92B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -33,6 +38,7 @@
 			isa = PBXGroup;
 			children = (
 				1A07A44A2E98359300C4911E /* PokemonApp */,
+				1A0AE7E52E993EA1009E6262 /* Frameworks */,
 				1A07A4492E98359300C4911E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +49,13 @@
 				1A07A4482E98359300C4911E /* PokemonApp.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1A0AE7E52E993EA1009E6262 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -65,6 +78,7 @@
 			);
 			name = PokemonApp;
 			packageProductDependencies = (
+				1AE05CF42E9942260000D92B /* Alamofire */,
 			);
 			productName = PokemonApp;
 			productReference = 1A07A4482E98359300C4911E /* PokemonApp.app */;
@@ -94,6 +108,9 @@
 			);
 			mainGroup = 1A07A43F2E98359300C4911E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				1AE05CF32E9942260000D92B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 1A07A4492E98359300C4911E /* Products */;
 			projectDirPath = "";
@@ -251,6 +268,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9P2964X8FM;
@@ -266,8 +284,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soltiful.PokemonApp.PokemonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soltiful.PokemonAppmyfirst.PokemonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -279,6 +298,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9P2964X8FM;
@@ -294,8 +314,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.soltiful.PokemonApp.PokemonApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.soltiful.PokemonAppmyfirst.PokemonApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,6 +345,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1AE05CF32E9942260000D92B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1AE05CF42E9942260000D92B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1AE05CF32E9942260000D92B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1A07A4402E98359300C4911E /* Project object */;
 }
