@@ -30,7 +30,6 @@ import Observation
         case .success(let data):
           self.pokemon = data.results.map { item in
             let pokemonId = item.url.split(separator: "/").last.flatMap { Int($0) } ?? 0
-              print("pokemon \(pokemonId)")
             let imageUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(pokemonId).png"
             return PokemonListItem(name: item.name, image: imageUrl, url: item.url)
           }
